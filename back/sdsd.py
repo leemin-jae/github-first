@@ -131,12 +131,70 @@
 # print(dr +bur -50)
 
 #------------------------------------------------
-a = 5
-for i in range(0,2*a-1):
-    for j in range(i,a):
-        print("*",end="")
-    print()
-for i in range(0,2*a-1):
-    for j in reversed(range(i,a)):
-        print("*",end="")
-    print()
+# a = int(input())
+
+# for i in range(2*a-1):
+#     if(i < a):
+#         for j in range(i):
+#             print(" ", end = "")
+#         for k in reversed(range(2*(a-i)-1)):
+#             print("*", end="")
+#         print()
+#     else:
+#         for z in reversed(range(2*a-1 -i -1)):
+#             print(" ", end = "")
+#         for k in range(2*(i-a)+3):
+#             print("*", end="")
+#         print()
+
+#---------------------------------------------------------
+
+# a = 5
+
+# for i in range(5):
+#     print(" "*i + "*"*(2*(5-i)-1))
+# for j in range(3,-1,-1):
+#     print("/"*j + "*"*(2*(5-j)-1))
+
+#______________-------------------------------------------
+
+# a = int(input())
+# for k in range(2*a):
+#     if k%2 == 0:
+#         for i in range(a):
+#             if(i%2 == 0):
+#                 print("*",end="")
+#             else:
+#                 print(" ",end="")
+#         print()
+#     else:
+#         for i in range(a):
+#             if(i%2 == 0):
+#                 print(" ",end="")
+#             else:
+#                 print("*",end="")
+#         print()
+
+
+# N = int(input())
+# even = N//2
+# odd = N - N//2
+
+# for i in range(N):
+#     print("* " * odd)
+#     print(" *" * even)
+
+#----------------------------------------------------------------------------------
+# a = int(input())
+
+# for m in range(a):	
+# 	j = 0
+# 	l = input()
+# 	k = [0 for i in range(len(l))]
+# 	for i in range(len(l)):
+# 		if(l[i] == "O"):
+# 			k[i] = j + 1
+# 		j = k[i]
+		
+# 	print(sum(k))
+		
