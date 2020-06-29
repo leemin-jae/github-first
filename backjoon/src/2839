@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int a;
+	cin >> a;
+	int max  =  999999;
+	int i = 0;
+	while(a >= 0){
+		if(a%3 == 0 && i+(a/3) < max) max = i+(a/3);
+		i++;
+		a -= 5;
+		
+	}
+	if(max == 999999){
+		cout << -1;
+	}
+	else{
+		cout << max;
+	}
+
+		
+	}

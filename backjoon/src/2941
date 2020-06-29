@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	string a;
+	cin >> a;
+	int len = a.size();
+	for(int  i = 0 ; i < a.size(); i++){
+		switch(a[i]){
+			case '-':
+				len --;
+				break;
+			case 'j':
+				if(a[i-1] == 'n' || a[i-1] == 'l') len --;
+				break;
+			case '=':
+				if(a[i-1] =='z' && a[i-2] == 'd') len = len -2;
+				else len --;
+				break;
+		}	
+	}
+	
+	cout << len;
+	
+}

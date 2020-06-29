@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author minjae
- *
- */
-module test {
-}
