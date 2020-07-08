@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int st(int a){
+	int sum = 0;
+	int p;
+	int k;
+	for(int i = 0 ; i < log10(a)+1 ; i++){
+		p = pow(10,i+1);
+		k = pow(10,i);
+		sum += (a%p)/k;
+	}
+	sum += a;
+	return sum;
+}
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+	int a;
+	cin  >> a;
+	
+	int num = 9999999;
+	for(int i = a-1 ; i>a-(log10(a)+1)*10;i--){
+		if(st(i) == a && i < num){
+			num = i;
+		}
+		
+	}
+	if(num == 9999999) cout << 0;
+	else cout << num;
+}

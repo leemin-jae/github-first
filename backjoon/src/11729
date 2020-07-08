@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+
+	int a;
+	cin >> a;
+	int wei[a][3];
+	for(int i = 0 ; i< a; i++){
+		cin >> wei[i][0] >> wei[i][1];
+		wei[i][2] = 0;
+	}
+	
+	for(int i = 0 ; i < a-1; i++){
+		for(int j =i+1 ; j <a ; j++){
+			if(wei[i][0] > wei[j][0] && wei[i][1] > wei[j][1]) wei[j][2]++;
+			else if(wei[i][0] < wei[j][0] && wei[i][1] < wei[j][1]) wei[i][2]++;
+		}
+		
+	}
+	for(int i =0; i < a; i++){
+		cout << wei[i][2]+1 <<" ";
+	}
+}

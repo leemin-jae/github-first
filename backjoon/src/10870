@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int fi(int a){
+	if(a == 0) return 0;
+	if(a == 1) return 1;
+	return fi(a-1) + fi(a-2);
+}
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+	int a;
+	cin >> a;
+	cout << fi(a);
+}

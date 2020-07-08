@@ -1,0 +1,32 @@
+#include <iostream>
+#define maxname 1001
+using namespace std;
+
+int main() {
+	cin.tie(NULL);
+	
+	int a[maxname] = {0,};
+	
+	for(int i = 2; i<=1000;i++){
+		a[i] = i;
+	}
+	
+	for(int i = 2; i<= 1000; i++){
+		if(a[i] == 0 ) continue;
+		for(int j = i*i; j <= 1000; j += i){
+			a[j] = 0;
+		}
+	}
+	
+	int num;
+	int sum = 0;
+	cin >> num;
+	for(int i =0; i <num; i++){
+		int k;
+		cin >> k;
+		if(a[k] != 0) sum += 1;
+	}
+	cout << sum;
+}
+
+
